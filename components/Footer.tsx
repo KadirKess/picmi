@@ -36,12 +36,12 @@ export default function Footer({ showMainCta = false }: FooterProps) {
             </div>
           </>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left border-t-2 border-black pt-12">
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 text-left ${showMainCta ? "border-t-2" : ""} border-black pt-12`}>
           <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-primary inline-block px-2 border-2 border-black">
               Pages
             </h4>
-            <ul className="space-y-3 text-lg font-medium">
+            <ul className={`space-y-3 text-lg font-medium`}>
               <li>
                 <Link
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
