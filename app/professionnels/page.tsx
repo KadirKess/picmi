@@ -22,7 +22,7 @@ export default function ProfessionnelsPage() {
         <div className="absolute top-32 right-8 w-10 h-10 bg-picmi-accent rounded-full border-2 border-black hidden lg:block shadow-hard-sm"></div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-32 text-center relative z-10">
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold text-black leading-tight tracking-tight mb-6 md:mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-black leading-tight tracking-snug mb-6 md:mb-8">
             Devenez Partenaire: L'Animation Photo Rentable et Sans Risque
           </h1>
           <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-lg md:text-2xl text-black font-medium bg-picmi-cream inline-block px-4 py-2 md:px-6 md:py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
