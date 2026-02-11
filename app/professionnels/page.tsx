@@ -23,15 +23,22 @@ export default function ProfessionnelsPage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-32 text-center relative z-10">
           <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold text-black leading-tight tracking-tight mb-6 md:mb-8">
-            GÉNÉREZ DES{" "}
-            <span className="bg-picmi-primary px-4 py-1 md:px-6 border-2 border-black shadow-hard rounded-2xl transform rotate-2 inline-block mt-2">
-              REVENUS
-            </span>
+            Devenez Partenaire: L'Animation Photo Rentable et Sans Risque
           </h1>
           <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-lg md:text-2xl text-black font-medium bg-picmi-cream inline-block px-4 py-2 md:px-6 md:py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
-            Une animation photobooth qui attire du monde et génère des revenus.
-            Sans aucun risque financier pour vous.
+            Transformez votre événement ou votre établissement avec notre borne photo en dépôt gratuit.
           </p>
+          <div className="mt-8 md:mt-12 max-w-3xl mx-auto text-center">
+            <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
+              Le Photobooth: Le nouveau standard des soirées réussies.
+              Aujourd'hui, un événement sans souvenirs photo est un événement
+              oublié. Que ce soit pour une soirée en club, un gala étudiant, un
+              festival ou une animation commerciale, vos clients veulent capturer
+              l'instant et le partager immédiatement. Nous vous proposons
+              d'intégrer gratuitement cette animation incontournable et de
+              transformer chaque sourire en source de revenus pour vous.
+            </p>
+          </div>
           <div className="mt-8 md:mt-12 flex justify-center">
             <a
               className="inline-flex items-center justify-center px-6 py-3 md:px-10 md:py-5 border-2 border-black text-lg md:text-2xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
@@ -459,6 +466,35 @@ export default function ProfessionnelsPage() {
                 logo, vos couleurs et votre identité visuelle. Chaque tirage
                 devient un support de communication que vos visiteurs partagent
                 et conservent.
+              </div>
+            </details>
+            <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-accent open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
+              <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
+                De quel espace avez-vous besoin?
+                <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
+                  expand_more
+                </span>
+              </summary>
+              <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
+                Notre borne est conçue pour optimiser l'espace. Elle occupe
+                moins de 1m2 au sol. Il suffit d'une prise électrique standard
+                (220V) à proximité. Son design élégant lui permet de s'intégrer
+                partout (hall, coin bar, entrée).
+              </div>
+            </details>
+
+            <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
+              <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
+                Que se passe-t-il en cas de panne ou de manque de papier ?
+                <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
+                  expand_more
+                </span>
+              </summary>
+              <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
+                Nous surveillons l'état de la borne à distance. En cas de
+                problème technique ou de besoin de consommables, notre équipe
+                intervient rapidement. Tout est inclus dans le service, vous
+                n'avez rien à gérer.
               </div>
             </details>
           </div>
