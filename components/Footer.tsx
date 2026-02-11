@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
+
 export default function Footer() {
   return (
     <footer
@@ -19,12 +21,39 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 md:mb-16">
           <a
             className="text-xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
-            href="mailto:hello@picmi.com"
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            hello@picmi.com
+            Réservez maintenant
           </a>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left border-t-2 border-black pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-left border-t-2 border-black pt-12">
+          <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
+            <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-primary inline-block px-2 border-2 border-black">
+              Pages
+            </h4>
+            <ul className="space-y-3 text-lg font-medium">
+              <li>
+                <Link
+                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
+                  href="/particuliers"
+                >
+                  <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
+                  Particuliers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
+                  href="/professionnels"
+                >
+                  <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
+                  Professionnels
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-mint inline-block px-2 border-2 border-black">
               Réseaux
@@ -91,9 +120,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="md:text-right flex flex-col justify-end">
-            <p className="text-lg font-bold">© 2023 Pic'mi.</p>
+            <p className="text-lg font-bold">© 2023 Pic&apos;mi.</p>
             <p className="text-sm font-medium mt-1">
-              Designed with <span className="text-red-500">❤️</span> &amp; ☁️
+              Designed with ❤️ &amp; ☁️
             </p>
           </div>
         </div>
