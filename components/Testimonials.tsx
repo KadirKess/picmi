@@ -45,17 +45,17 @@ export default function Testimonials() {
         }}
       ></div>
       <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <h2 className="text-center text-5xl md:text-6xl font-extrabold mb-20 text-black">
+        <h2 className="text-center text-4xl md:text-6xl font-extrabold mb-12 md:mb-20 text-black">
           ILS ONT{" "}
           <span className="bg-picmi-accent px-4 py-1 border-2 border-black text-black shadow-hard inline-block transform rotate-1 rounded-xl">
             ADORÉ
           </span>
         </h2>
-        <div className="flex flex-wrap justify-center gap-12 md:gap-16">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-16">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`w-80 ${t.bgColor} p-8 border-2 border-black shadow-hard transform ${t.rotate} hover:rotate-0 hover:scale-105 transition-all duration-300 rounded-xl cursor-pointer sticker-hover ${t.zIndex}`}
+              className={`w-full max-w-sm ${t.bgColor} p-6 md:p-8 border-2 border-black shadow-hard transform ${t.rotate} hover:rotate-0 hover:scale-105 transition-all duration-300 rounded-xl cursor-pointer sticker-hover ${t.zIndex}`}
             >
               <div className="flex items-center mb-6">
                 <div className="w-14 h-14 bg-white rounded-full border-2 border-black overflow-hidden mr-4 relative">

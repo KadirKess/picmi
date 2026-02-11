@@ -27,41 +27,42 @@ export default function Hero() {
         <div className="absolute top-20 left-10 w-24 h-24 bg-picmi-mint rounded-full border-2 border-black hidden lg:block animate-[bounce_3s_infinite] shadow-hard opacity-80"></div>
         <div className="absolute bottom-32 right-32 w-20 h-20 bg-picmi-accent rounded-xl border-2 border-black rotate-12 hidden lg:block shadow-hard opacity-80"></div>
         <div className="absolute top-40 right-10 w-12 h-12 bg-picmi-primary rounded-full border-2 border-black hidden lg:block shadow-hard-sm"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 text-center relative z-10">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-black leading-tight tracking-tight mb-8 drop-shadow-sm">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-20 md:pb-24 text-center relative z-10">
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-extrabold text-black leading-tight tracking-tight mb-6 md:mb-8 drop-shadow-sm">
             CAPTUREZ <br className="hidden md:block" />
-            <span className="text-black bg-picmi-mint px-6 py-1 border-2 border-black shadow-hard rounded-2xl transform rotate-2 inline-block mt-2">
+            <span className="text-black bg-picmi-mint px-4 py-1 md:px-6 border-2 border-black shadow-hard rounded-2xl transform rotate-2 inline-block mt-2">
               L'INSTANT
             </span>
           </h1>
-          <p className="mt-8 max-w-2xl mx-auto text-xl md:text-2xl text-black font-medium bg-picmi-cream inline-block px-6 py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
+          <p className="mt-6 md:mt-8 max-w-2xl mx-auto text-lg md:text-2xl text-black font-medium bg-picmi-cream inline-block px-4 py-2 md:px-6 md:py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
             Pic'mi : La borne photo douce et stylée pour vos souvenirs.
           </p>
-          <div className="mt-12 flex justify-center gap-6">
+          <div className="mt-8 md:mt-12 flex justify-center gap-6">
             <Link
-              className="inline-flex items-center justify-center px-10 py-5 border-2 border-black text-2xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
+              className="inline-flex items-center justify-center px-6 py-3 md:px-10 md:py-5 border-2 border-black text-lg md:text-2xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
               href="#contact"
             >
               RÉSERVER MAINTENANT
-              <span className="material-icons ml-3">photo_camera</span>
+              <span className="material-icons ml-2 md:ml-3">photo_camera</span>
             </Link>
           </div>
         </div>
-        
-        <div className="relative h-64 md:h-80 w-full border-t-2 border-black grid grid-cols-2 md:grid-cols-4">
+
+        <div className="relative h-auto md:h-80 w-full border-t-2 border-black grid grid-cols-2 md:grid-cols-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`border-r-2 border-black relative group overflow-hidden ${
-                index === 0
+              className={`h-40 md:h-full border-r-2 border-black relative group overflow-hidden ${index === 1 ? 'border-r-0 md:border-r-2' : ''
+                } ${index === 3 ? 'border-r-0' : ''
+                } ${index === 0
                   ? "bg-picmi-accent"
                   : index === 1
-                  ? "bg-picmi-mint md:border-r-2" // Correcting border for MD
-                  : index === 2
-                  ? "bg-picmi-primary"
-                  : "bg-picmi-cream border-r-0"
-              }`}
+                    ? "bg-picmi-mint"
+                    : index === 2
+                      ? "bg-picmi-primary"
+                      : "bg-picmi-cream"
+                }`}
             >
               <Image
                 src={image.src}

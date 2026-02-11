@@ -7,7 +7,7 @@ export default function Footer() {
       id="contact"
     >
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter drop-shadow-sm">
+        <h2 className="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter drop-shadow-sm">
           PRÊT À{" "}
           <span
             className="text-transparent"
@@ -16,9 +16,9 @@ export default function Footer() {
             FLASHER ?
           </span>
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 md:mb-16">
           <a
-            className="text-3xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-8 py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
+            className="text-xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
             href="mailto:hello@picmi.com"
           >
             hello@picmi.com

@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link
-              className="text-2xl font-extrabold tracking-tight border-2 border-black bg-picmi-primary px-4 py-2 rounded-full shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
+              className="text-xl md:text-2xl font-extrabold tracking-tight border-2 border-black bg-picmi-primary px-3 py-1 md:px-4 md:py-2 rounded-full shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
               href="#"
             >
               Pic'mi
@@ -52,31 +52,31 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full bg-picmi-cream border-b-2 border-black p-4 flex flex-col space-y-4 shadow-hard">
-           <Link
-              className="text-black font-bold hover:bg-picmi-mint px-4 py-2 rounded-xl border-2 border-transparent hover:border-black transition-all text-center"
-              href="#services"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              className="text-black font-bold hover:bg-picmi-accent px-4 py-2 rounded-xl border-2 border-transparent hover:border-black transition-all text-center"
-              href="#temoignages"
-              onClick={() => setIsOpen(false)}
-            >
-              Témoignages
-            </Link>
-            <Link
-              className="bg-black text-white px-6 py-2 rounded-xl font-bold border-2 border-transparent hover:bg-white hover:text-black hover:border-black shadow-hard-sm hover:shadow-hard transition-all text-center"
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-            >
-              Réserver
-            </Link>
+          <Link
+            className="text-black font-bold hover:bg-picmi-mint px-4 py-2 rounded-xl border-2 border-transparent hover:border-black transition-all text-center"
+            href="#services"
+            onClick={() => setIsOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            className="text-black font-bold hover:bg-picmi-accent px-4 py-2 rounded-xl border-2 border-transparent hover:border-black transition-all text-center"
+            href="#temoignages"
+            onClick={() => setIsOpen(false)}
+          >
+            Témoignages
+          </Link>
+          <Link
+            className="bg-black text-white px-6 py-2 rounded-xl font-bold border-2 border-transparent hover:bg-white hover:text-black hover:border-black shadow-hard-sm hover:shadow-hard transition-all text-center"
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+          >
+            Réserver
+          </Link>
         </div>
       )}
     </nav>
