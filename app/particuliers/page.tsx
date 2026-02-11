@@ -194,39 +194,11 @@ export default function ParticuliersPage() {
             Questions Fréquentes
           </h2>
           <div className="space-y-4 md:space-y-6">
-            <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
-              <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Comment fonctionne la borne photo ?
-                <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
-                  expand_more
-                </span>
-              </summary>
-              <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                C&apos;est très simple ! Vos invités se placent devant la borne,
-                choisissent un filtre ou un cadre, et prennent la photo. En 8
-                secondes, le tirage sort automatiquement. Ils peuvent aussi
-                recevoir la version numérique par e-mail.
-              </div>
-            </details>
 
-            <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
-              <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Quel est le délai pour réserver ?
-                <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
-                  expand_more
-                </span>
-              </summary>
-              <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Nous vous conseillons de réserver le plus tôt possible pour
-                garantir la disponibilité à votre date. En haute saison
-                (mai-septembre), les week-ends partent vite. Contactez-nous via
-                WhatsApp pour vérifier la disponibilité.
-              </div>
-            </details>
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-accent open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Que se passe-t-il une fois mes tirages inclus épuisés ?
+                Que se passe-t-il si nous avons utilisé tous les tirages papiers prévus ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
@@ -241,18 +213,17 @@ export default function ParticuliersPage() {
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                La borne est-elle livrée et installée ?
+                Comment fonctionne le paiement par QR Code pour les invités ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Oui ! L&apos;installation est 100% clé en main. Nous arrivons
-                environ 1h avant le début de votre événement pour installer la
-                borne, tester le matériel et nous assurer que tout est parfait.
-                Vous n&apos;avez rien à faire.
+                C&apos;est très simple. Si un invité veut payer sa photo, un QR Code s&apos;affiche sur l&apos;écran tactile. Il le scanne avec son téléphone, valide le paiement sécurisé (via sa carte ou Apple/Google Pay), et la photo s&apos;imprime instantanément. Pas besoin d&apos;application!
               </div>
             </details>
+
+
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
                 Puis-je personnaliser le cadre des photos?

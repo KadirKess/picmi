@@ -388,7 +388,7 @@ export default function ProfessionnelsPage() {
           <div className="space-y-4 md:space-y-6">
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Quel investissement est nécessaire de notre côté ?
+                L'installation est-elle vraiment 100% gratuite pour moi ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
@@ -402,37 +402,19 @@ export default function ProfessionnelsPage() {
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Comment fonctionne le partage de revenus ?
+                Comment mes clients paient-ils leurs photos?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Les visiteurs paient directement via le terminal de paiement
-                intégré à la borne. À la fin de l&apos;événement, nous vous
-                communiquons le bilan complet et vous recevez votre part des
-                revenus selon les conditions convenues ensemble.
-              </div>
-            </details>
-
-            <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-accent open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
-              <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Comment se déroule l&apos;installation le jour J ?
-                <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
-                  expand_more
-                </span>
-              </summary>
-              <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Notre équipe arrive environ 1h avant le début de
-                l&apos;événement. Nous installons la borne, calibrons
-                l&apos;éclairage, testons le terminal de paiement et vérifions
-                que tout fonctionne parfaitement. Vous n&apos;avez rien à gérer.
+                La borne est 100% autonome. Elle est équipée d&apos;un QR code acceptant Apple Pay, Google Pay, etc. Vous n&apos;avez aucune gestion de caisse à faire.
               </div>
             </details>
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Peut-on mettre en place une installation récurrente ?
+                Puis-je l'installer de manière récurrente (toutes les semaines)?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
@@ -456,7 +438,7 @@ export default function ProfessionnelsPage() {
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Quel support marketing est fourni ?
+                Les photos peuvent-elles afficher mon logo?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
