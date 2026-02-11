@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <Testimonials />
-      <Footer />
+      <Footer showMainCta={true} />
     </main>
   );
 }

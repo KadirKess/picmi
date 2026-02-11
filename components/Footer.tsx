@@ -2,32 +2,40 @@ import Link from "next/link";
 
 const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
 
-export default function Footer() {
+interface FooterProps {
+  showMainCta?: boolean;
+}
+
+export default function Footer({ showMainCta = false }: FooterProps) {
   return (
     <footer
       className="bg-picmi-cream text-black border-t-2 border-black pt-20 pb-10"
       id="contact"
     >
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter drop-shadow-sm">
-          PRÊT À{" "}
-          <span
-            className="text-transparent"
-            style={{ WebkitTextStroke: "2px black" }}
-          >
-            FLASHER ?
-          </span>
-        </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 md:mb-16">
-          <a
-            className="text-xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Réservez maintenant
-          </a>
-        </div>
+        {showMainCta && (
+          <>
+            <h2 className="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter drop-shadow-sm">
+              PRÊT À{" "}
+              <span
+                className="text-transparent"
+                style={{ WebkitTextStroke: "2px black" }}
+              >
+                FLASHER ?
+              </span>
+            </h2>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 md:mb-16">
+              <a
+                className="text-xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Réservez maintenant
+              </a>
+            </div>
+          </>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-left border-t-2 border-black pt-12">
           <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-primary inline-block px-2 border-2 border-black">
