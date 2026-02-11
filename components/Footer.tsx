@@ -36,7 +36,7 @@ export default function Footer({ showMainCta = false }: FooterProps) {
             </div>
           </>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-left border-t-2 border-black pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left border-t-2 border-black pt-12">
           <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-primary inline-block px-2 border-2 border-black">
               Pages
@@ -94,7 +94,7 @@ export default function Footer({ showMainCta = false }: FooterProps) {
               </li>
             </ul>
           </div>
-          <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
+          {/* <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-accent inline-block px-2 border-2 border-black">
               Infos
             </h4>
@@ -126,11 +126,11 @@ export default function Footer({ showMainCta = false }: FooterProps) {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="md:text-right flex flex-col justify-end">
-            <p className="text-lg font-bold">© 2023 Pic&apos;mi.</p>
+            <p className="text-lg font-bold">© 2026 Pic&apos;mi.</p>
             <p className="text-sm font-medium mt-1">
-              Designed with ❤️ &amp; ☁️
+              Tous droits réservés.
             </p>
           </div>
         </div>
