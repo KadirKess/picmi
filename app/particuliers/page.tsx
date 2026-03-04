@@ -112,9 +112,9 @@ export default function ParticuliersPage() {
                 Qualité Studio
               </h3>
               <p className="font-medium text-gray-800">
-                Appareil DSLR Canon et éclairage Ring Light professionnel. Vos
-                photos ont une qualité digne d&apos;un studio, même en pleine
-                fête.
+                APN reflex Canon 1300D, éclairage
+                intégré. Vos photos ont une qualité digne d&apos;un studio,
+                même en pleine fête.
               </p>
             </div>
 

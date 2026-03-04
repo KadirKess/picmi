@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
+const WHATSAPP_LINK = "https://wa.me/33699083532";
 
 interface FooterProps {
   showMainCta?: boolean;
@@ -121,15 +121,7 @@ export default function Footer({ showMainCta = false }: FooterProps) {
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
                   href="/mentions-legales"
                 >
-                  <span className="w-2 h-2 bg-black rounded-full"></span> CGV &amp; Confidentialité
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
-                  href="/mentions-legales#rgpd"
-                >
-                  <span className="w-2 h-2 bg-black rounded-full"></span> RGPD
+                  <span className="w-2 h-2 bg-black rounded-full"></span> Mentions légales
                 </Link>
               </li>
             </ul>

@@ -11,23 +11,23 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-picmi-cream border-b-2 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center">
-            <Link
-              className="flex items-center gap-2 border-2 border-black bg-picmi-primary px-3 py-1 md:px-4 md:py-2 rounded-full shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200 group"
-              href="/"
-              title="Retour à l'accueil"
-            >
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <Link href="/" title="Retour à l'accueil">
               <Image
                 src="/picmi-logo.svg"
                 alt="Pic'mi — Accueil"
-                width={72}
-                height={28}
-                className="h-6 md:h-7 w-auto"
+                width={120}
+                height={44}
+                className="h-10 md:h-12 w-auto"
                 priority
               />
-              <span className="material-icons text-sm text-black opacity-50 group-hover:opacity-100 transition-opacity">
-                home
-              </span>
+            </Link>
+            <Link
+              className="border-2 border-black bg-picmi-primary p-1.5 rounded-full shadow-hard-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
+              href="/"
+              title="Accueil"
+            >
+              <span className="material-icons text-sm text-black leading-none block">home</span>
             </Link>
           </div>
           <div className="hidden md:flex space-x-6 items-center h-full">

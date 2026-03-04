@@ -3,14 +3,14 @@
 import { useState } from "react";
 
 const pricingTiers = [
-  { prints: 50, price: 249 },
-  { prints: 75, price: 299 },
-  { prints: 100, price: 349 },
-  { prints: 150, price: 429 },
-  { prints: 200, price: 499 },
+  { prints: 50, price: 80 },
+  { prints: 100, price: 100 },
+  { prints: 200, price: 190 },
+  { prints: 400, price: 370 },
+  { prints: 700, price: 610 },
 ];
 
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
+const WHATSAPP_LINK = "https://wa.me/33699083532";
 
 export default function PricingSimulator() {
   const [selectedIndex, setSelectedIndex] = useState(2);
@@ -44,6 +44,14 @@ export default function PricingSimulator() {
                 {tier.prints} tirages
               </button>
             ))}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-full border-2 border-black font-bold text-lg transition-all duration-200 bg-picmi-accent shadow-hard-sm hover:bg-picmi-mint"
+            >
+              Offre personnalisée
+            </a>
           </div>
 
           <div className="text-center bg-picmi-bg border-2 border-black rounded-xl p-6 shadow-hard-sm">

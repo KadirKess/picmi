@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     "Contactez Pic'mi pour réserver votre photobooth ou en savoir plus sur nos offres. Disponible par WhatsApp ou par email.",
 };
 
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
-const EMAIL = "picmi@gmail.com";
+const WHATSAPP_LINK = "https://wa.me/33699083532";
+const EMAIL = "contact.picmi@gmail.com";
 
 export default function ContactPage() {
   return (

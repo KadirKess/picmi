@@ -250,9 +250,9 @@ export default function ProfessionnelsPage() {
                 Qualité Studio
               </h3>
               <p className="font-medium text-gray-800">
-                Appareil reflex Canon, éclairage Ring Light professionnel. Des
-                photos de qualité studio qui reflètent le sérieux de votre
-                organisation.
+                APN reflex Canon 1300D, éclairage
+                intégré. Des photos de qualité studio qui reflètent le sérieux
+                de votre organisation.
               </p>
             </div>
 
