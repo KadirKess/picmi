@@ -74,7 +74,7 @@ export default function Footer({ showMainCta = false }: FooterProps) {
               Réseaux
             </h4>
             <ul className="space-y-3 text-lg font-medium">
-              <li>
+              {/* <li>
                 <Link
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
                   href="#"
@@ -98,7 +98,7 @@ export default function Footer({ showMainCta = false }: FooterProps) {
                 >
                   <span className="w-2 h-2 bg-black rounded-full"></span> Facebook ↗
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <a
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"

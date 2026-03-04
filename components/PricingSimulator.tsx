@@ -45,9 +45,7 @@ export default function PricingSimulator() {
               </button>
             ))}
             <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="px-5 py-3 rounded-full border-2 border-black font-bold text-lg transition-all duration-200 bg-picmi-accent shadow-hard-sm hover:bg-picmi-mint"
             >
               Offre personnalisée
