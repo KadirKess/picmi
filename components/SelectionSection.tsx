@@ -26,9 +26,9 @@ export default function SelectionSection() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-black text-black mb-3 uppercase">Particuliers</h3>
+                                <h3 className="text-2xl md:text-3xl font-black text-black mb-3 uppercase">Particuliers &amp; Entreprises</h3>
                                 <p className="text-black font-medium text-lg leading-relaxed">
-                                    Mariages, anniversaires, fêtes privées... Capturez ces moments uniques avec style.
+                                    Mariages, anniversaires, séminaires, soirées d&apos;entreprise... Capturez ces moments uniques avec style.
                                 </p>
                             </div>
                             <div className="mt-8 flex items-center font-bold text-black group-hover:underline decoration-2 underline-offset-4">
@@ -50,9 +50,9 @@ export default function SelectionSection() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-black text-black mb-3 uppercase">Professionnels</h3>
+                                <h3 className="text-2xl md:text-3xl font-black text-black mb-3 uppercase">Professionnels &amp; Associations</h3>
                                 <p className="text-black font-medium text-lg leading-relaxed">
-                                    Séminaires, soirées d'entreprise, lancements... Marquez les esprits de vos collaborateurs.
+                                    Bars, festivals, soirées BDE, clubs... Transformez votre établissement en source de revenus.
                                 </p>
                             </div>
                             <div className="mt-8 flex items-center font-bold text-black group-hover:underline decoration-2 underline-offset-4">

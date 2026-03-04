@@ -34,4 +34,19 @@
     transform: translate(-2px, -2px) rotate(0deg) !important;
     box-shadow: 6px 6px 0px 0px #000000 !important;
   }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-transition {
+    animation: fadeInUp 350ms ease both;
+  }
 }

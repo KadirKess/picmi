@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,35 +13,44 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link
-              className="text-xl md:text-2xl font-extrabold tracking-tight border-2 border-black bg-picmi-primary px-3 py-1 md:px-4 md:py-2 rounded-full shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200"
+              className="flex items-center gap-2 border-2 border-black bg-picmi-primary px-3 py-1 md:px-4 md:py-2 rounded-full shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-200 group"
               href="/"
+              title="Retour à l'accueil"
             >
-              Pic&apos;mi
+              <Image
+                src="/picmi-logo.svg"
+                alt="Pic'mi — Accueil"
+                width={72}
+                height={28}
+                className="h-6 md:h-7 w-auto"
+                priority
+              />
+              <span className="material-icons text-sm text-black opacity-50 group-hover:opacity-100 transition-opacity">
+                home
+              </span>
             </Link>
           </div>
-          <div className="hidden md:flex space-x-8 items-center h-full">
+          <div className="hidden md:flex space-x-6 items-center h-full">
             <Link
-              className="text-black font-bold hover:bg-picmi-mint px-4 py-2 rounded-full border-2 border-transparent hover:border-black transition-all"
+              className="text-black font-bold underline decoration-2 underline-offset-4 decoration-transparent hover:decoration-black hover:bg-picmi-mint px-4 py-2 rounded-full border-2 border-transparent hover:border-black transition-all"
               href="/particuliers"
             >
-              Particuliers
+              Particuliers &amp; Entreprises
             </Link>
             <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
             <Link
-              className="text-black font-bold hover:bg-picmi-accent px-4 py-2 rounded-full border-2 border-transparent hover:border-black transition-all"
+              className="text-black font-bold underline decoration-2 underline-offset-4 decoration-transparent hover:decoration-black hover:bg-picmi-accent px-4 py-2 rounded-full border-2 border-transparent hover:border-black transition-all"
               href="/professionnels"
             >
-              Professionnels
+              Professionnels &amp; Associations
             </Link>
             <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
-            <a
-              className="bg-black text-white px-6 py-2 rounded-full font-bold border-2 border-transparent hover:bg-white hover:text-black hover:border-black shadow-hard-sm hover:shadow-hard transition-all"
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              className="bg-black text-white px-6 py-2 rounded-full font-bold border-2 border-black hover:bg-white hover:text-black shadow-hard-sm hover:shadow-hard transition-all"
+              href="/contact"
             >
-              Réserver
-            </a>
+              Nous contacter
+            </Link>
           </div>
           <div className="md:hidden">
             <button
@@ -65,24 +73,22 @@ export default function Navbar() {
             href="/particuliers"
             onClick={() => setIsOpen(false)}
           >
-            Particuliers
+            Particuliers &amp; Entreprises
           </Link>
           <Link
             className="text-black font-bold hover:bg-picmi-accent px-4 py-2 rounded-xl border-2 border-transparent hover:border-black transition-all text-center"
             href="/professionnels"
             onClick={() => setIsOpen(false)}
           >
-            Professionnels
+            Professionnels &amp; Associations
           </Link>
-          <a
-            className="bg-black text-white px-6 py-2 rounded-xl font-bold border-2 border-transparent hover:bg-white hover:text-black hover:border-black shadow-hard-sm hover:shadow-hard transition-all text-center"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            className="bg-black text-white px-6 py-2 rounded-xl font-bold border-2 border-black hover:bg-white hover:text-black shadow-hard-sm hover:shadow-hard transition-all text-center"
+            href="/contact"
             onClick={() => setIsOpen(false)}
           >
-            Réserver
-          </a>
+            Nous contacter
+          </Link>
         </div>
       )}
     </nav>

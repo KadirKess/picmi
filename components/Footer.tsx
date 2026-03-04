@@ -25,30 +25,28 @@ export default function Footer({ showMainCta = false }: FooterProps) {
               </span>
             </h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12 md:mb-16">
-              <a
-                className="text-xl md:text-5xl font-bold hover:text-picmi-primary transition-colors bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-transparent hover:border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                className="text-xl md:text-5xl font-bold bg-black text-white px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-black hover:bg-white hover:text-black shadow-hard-lg hover:shadow-hard transform duration-200"
+                href="/contact"
               >
-                Réservez maintenant
-              </a>
+                Nous contacter
+              </Link>
             </div>
           </>
         )}
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-10 text-left ${showMainCta ? "border-t-2" : ""} border-black pt-12`}>
+        <div className={`grid grid-cols-1 md:grid-cols-4 gap-10 text-left ${showMainCta ? "border-t-2" : ""} border-black pt-12`}>
           <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-primary inline-block px-2 border-2 border-black">
               Pages
             </h4>
-            <ul className={`space-y-3 text-lg font-medium`}>
+            <ul className="space-y-3 text-lg font-medium">
               <li>
                 <Link
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
                   href="/particuliers"
                 >
                   <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
-                  Particuliers
+                  Particuliers &amp; Entreprises
                 </Link>
               </li>
               <li>
@@ -57,7 +55,16 @@ export default function Footer({ showMainCta = false }: FooterProps) {
                   href="/professionnels"
                 >
                   <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
-                  Professionnels
+                  Professionnels &amp; Associations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
+                  href="/contact"
+                >
+                  <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -92,41 +99,41 @@ export default function Footer({ showMainCta = false }: FooterProps) {
                   <span className="w-2 h-2 bg-black rounded-full"></span> Facebook ↗
                 </Link>
               </li>
+              <li>
+                <a
+                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-2 h-2 bg-black rounded-full"></span> WhatsApp ↗
+                </a>
+              </li>
             </ul>
           </div>
-          {/* <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
+          <div className="bg-white p-6 rounded-xl border-2 border-black shadow-hard-sm">
             <h4 className="text-xl font-bold text-black mb-4 uppercase bg-picmi-accent inline-block px-2 border-2 border-black">
-              Infos
+              Légal
             </h4>
             <ul className="space-y-3 text-lg font-medium">
               <li>
                 <Link
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
-                  href="#"
+                  href="/mentions-legales"
                 >
-                  <span className="w-2 h-2 bg-black rounded-full"></span> CGV
+                  <span className="w-2 h-2 bg-black rounded-full"></span> CGV &amp; Confidentialité
                 </Link>
               </li>
               <li>
                 <Link
                   className="hover:text-picmi-primary transition-colors flex items-center gap-2"
-                  href="#"
+                  href="/mentions-legales#rgpd"
                 >
-                  <span className="w-2 h-2 bg-black rounded-full"></span> Mentions
-                  Légales
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-picmi-primary transition-colors flex items-center gap-2"
-                  href="#"
-                >
-                  <span className="w-2 h-2 bg-black rounded-full"></span>{" "}
-                  Confidentialité
+                  <span className="w-2 h-2 bg-black rounded-full"></span> RGPD
                 </Link>
               </li>
             </ul>
-          </div> */}
+          </div>
           <div className="md:text-right flex flex-col justify-end">
             <p className="text-lg font-bold">© 2026 Pic&apos;mi.</p>
             <p className="text-sm font-medium mt-1">

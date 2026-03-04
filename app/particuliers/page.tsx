@@ -5,16 +5,16 @@ import Footer from "@/components/Footer";
 import PricingSimulator from "@/components/PricingSimulator";
 
 export const metadata: Metadata = {
-  title: "Pic'mi - Particuliers | Borne Photo pour vos Événements",
+  title: "Pic'mi - Particuliers & Entreprises | Borne Photo pour vos Événements",
   description:
-    "Louez une borne photo fun et stylée pour vos mariages, anniversaires et fêtes. Formules flexibles, impression instantanée et souvenirs inoubliables.",
+    "Louez une borne photo fun et stylée pour vos mariages, anniversaires, séminaires et soirées d'entreprise. Formules flexibles, impression instantanée et souvenirs inoubliables.",
 };
 
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
+const CONTACT_LINK = "/contact";
 
 export default function ParticuliersPage() {
   return (
-    <main>
+    <main className="page-transition">
       <Navbar />
 
       {/* Section Accroche */}
@@ -25,32 +25,41 @@ export default function ParticuliersPage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-32 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-black leading-tight tracking-snug mb-6 md:mb-8">
-            Louez votre Photobooth: L'Animation Star de votre Événement
+            Louez votre Photobooth: L&apos;Animation Star de votre Événement
           </h1>
           <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-lg md:text-2xl text-black font-medium bg-picmi-cream inline-block px-4 py-2 md:px-6 md:py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
-            Mariage, Anniversaire, Soirée privée: Offrez des souvenirs
-            instantanés à vos invités avec une flexibilité totale.
+            Mariage, Anniversaire, Séminaire, Soirée d&apos;entreprise : des souvenirs
+            instantanés avec une flexibilité totale.
           </p>
-          <div className="mt-8 md:mt-12 max-w-2xl mx-auto text-center">
-            <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
-              Plus qu'une photo, un moment de partage. Fini les photos floues sur
-              les téléphones que l'on ne regarde jamais. Avec notre Photobooth,
-              vous offrez une animation ludique qui rassemble toutes les
-              générations. De la grand-mère aux enfants, tout le monde se prête
-              au jeu ! Vos invités repartent avec leur tirage papier, et vous,
-              vous gardez une copie numérique de tous les sourires de la soirée.
-            </p>
+
+          {/* Keyword Cards */}
+          <div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+            {[
+              { icon: "photo_library", label: "Tirage papier immédiat" },
+              { icon: "smartphone", label: "Copie numérique incluse" },
+              { icon: "groups", label: "Pour toutes les générations" },
+              { icon: "auto_awesome", label: "Animation clé en main" },
+              { icon: "celebration", label: "Mariage · Anniversaire" },
+              { icon: "business", label: "Séminaire · Soirée d'entreprise" },
+            ].map(({ icon, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2 bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-bold shadow-hard-sm"
+              >
+                <span className="material-icons text-base">{icon}</span>
+                {label}
+              </span>
+            ))}
           </div>
+
           <div className="mt-8 md:mt-12 flex justify-center">
-            <a
+            <Link
               className="inline-flex items-center justify-center px-6 py-3 md:px-10 md:py-5 border-2 border-black text-lg md:text-2xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={CONTACT_LINK}
             >
               RÉSERVER MAINTENANT
-              <span className="material-icons ml-2 md:ml-3">chat</span>
-            </a>
+              <span className="material-icons ml-2 md:ml-3">calendar_month</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -195,7 +204,6 @@ export default function ParticuliersPage() {
           </h2>
           <div className="space-y-4 md:space-y-6">
 
-
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-accent open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
                 Que se passe-t-il si nous avons utilisé tous les tirages papiers prévus ?
@@ -223,17 +231,16 @@ export default function ParticuliersPage() {
               </div>
             </details>
 
-
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Puis-je personnaliser le cadre des photos?
+                Puis-je personnaliser le cadre des photos ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Absolument ! C'est inclus. Nous créons ensemble un contour photo
-                sur-mesure avec vos prénoms, la date de l'événement et vos
+                Absolument ! C&apos;est inclus. Nous créons ensemble un contour photo
+                sur-mesure avec vos prénoms, la date de l&apos;événement et vos
                 couleurs.
               </div>
             </details>
@@ -246,9 +253,9 @@ export default function ParticuliersPage() {
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                C'est prévu ! Quelques jours après l'événement, nous vous
+                C&apos;est prévu ! Quelques jours après l&apos;événement, nous vous
                 envoyons un lien vers une galerie privée où vous pourrez
-                télécharger toutes les photos (y compris celles qui n'ont pas été
+                télécharger toutes les photos (y compris celles qui n&apos;ont pas été
                 imprimées).
               </div>
             </details>
@@ -263,18 +270,16 @@ export default function ParticuliersPage() {
             Réservez votre date dès maintenant !
           </h2>
           <p className="text-lg md:text-xl font-medium text-gray-800 max-w-2xl mx-auto mb-10">
-            Les week-ends d'été et de fêtes sont très demandés. Contactez-nous
+            Les week-ends d&apos;été et de fêtes sont très demandés. Contactez-nous
             pour vérifier la disponibilité et choisir votre pack.
           </p>
-          <a
+          <Link
             className="inline-flex items-center justify-center px-8 py-4 md:px-12 md:py-6 border-2 border-black text-xl md:text-3xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_LINK}
           >
             RÉSERVER MAINTENANT
-            <span className="material-icons ml-3">chat</span>
-          </a>
+            <span className="material-icons ml-3">calendar_month</span>
+          </Link>
         </div>
       </section>
 

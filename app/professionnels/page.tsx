@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Pic'mi - Professionnels & Associations | Partenariat Photobooth",
   description:
-    "Proposez une animation photobooth sans investissement. Revenus partagés, installation clé en main et marketing personnalisé pour vos événements professionnels.",
+    "Proposez une animation photobooth sans investissement. Revenus partagés, installation clé en main et marketing personnalisé pour bars, festivals, BDE et événements professionnels.",
 };
 
-const WHATSAPP_LINK = "https://wa.me/33XXXXXXXXX";
+const CONTACT_LINK = "/contact";
 
 export default function ProfessionnelsPage() {
   return (
-    <main>
+    <main className="page-transition">
       <Navbar />
 
       {/* Section Accroche */}
@@ -23,32 +24,40 @@ export default function ProfessionnelsPage() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-32 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-black leading-tight tracking-snug mb-6 md:mb-8">
-            Devenez Partenaire: L'Animation Photo Rentable et Sans Risque
+            Devenez Partenaire: L&apos;Animation Photo Rentable et Sans Risque
           </h1>
           <p className="mt-6 md:mt-8 max-w-3xl mx-auto text-lg md:text-2xl text-black font-medium bg-picmi-cream inline-block px-4 py-2 md:px-6 md:py-3 border-2 border-black shadow-hard rounded-xl transform -rotate-1">
-            Transformez votre événement ou votre établissement avec notre borne photo en dépôt gratuit.
+            Transformez votre établissement ou événement avec notre borne photo en dépôt gratuit.
           </p>
-          <div className="mt-8 md:mt-12 max-w-3xl mx-auto text-center">
-            <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
-              Le Photobooth: Le nouveau standard des soirées réussies.
-              Aujourd'hui, un événement sans souvenirs photo est un événement
-              oublié. Que ce soit pour une soirée en club, un gala étudiant, un
-              festival ou une animation commerciale, vos clients veulent capturer
-              l'instant et le partager immédiatement. Nous vous proposons
-              d'intégrer gratuitement cette animation incontournable et de
-              transformer chaque sourire en source de revenus pour vous.
-            </p>
+
+          {/* Keyword Cards */}
+          <div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+            {[
+              { icon: "money_off", label: "Intégration 100% gratuite" },
+              { icon: "trending_up", label: "Source de revenus additionnels" },
+              { icon: "photo_camera", label: "Capture chaque instant" },
+              { icon: "local_bar", label: "Bar · Club · Restaurant" },
+              { icon: "festival", label: "Festival · Gala · BDE" },
+              { icon: "handshake", label: "Partenariat sans risque" },
+            ].map(({ icon, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2 bg-white border-2 border-black rounded-full px-4 py-2 text-sm font-bold shadow-hard-sm"
+              >
+                <span className="material-icons text-base">{icon}</span>
+                {label}
+              </span>
+            ))}
           </div>
+
           <div className="mt-8 md:mt-12 flex justify-center">
-            <a
+            <Link
               className="inline-flex items-center justify-center px-6 py-3 md:px-10 md:py-5 border-2 border-black text-lg md:text-2xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={CONTACT_LINK}
             >
               DEVENIR PARTENAIRE
               <span className="material-icons ml-2 md:ml-3">handshake</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -137,12 +146,11 @@ export default function ProfessionnelsPage() {
               </div>
               <div>
                 <h3 className="text-xl font-extrabold mb-2 uppercase">
-                  Réservation
+                  Prise de contact
                 </h3>
                 <p className="font-medium text-gray-800">
-                  Contactez-nous via WhatsApp. Nous discutons ensemble de votre
-                  événement, du lieu et de la date. Aucun engagement financier
-                  de votre part.
+                  Contactez-nous pour discuter de votre événement, du lieu et de
+                  la date. Aucun engagement financier de votre part.
                 </p>
               </div>
             </div>
@@ -322,8 +330,8 @@ export default function ProfessionnelsPage() {
               </p>
             </div>
 
-            {/* Ambiance garantie */}
-            <div className="bg-picmi-cream border-2 border-black rounded-2xl shadow-hard p-6 md:p-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm transition-all duration-200">
+            {/* Ambiance garantie — was bg-picmi-cream (uncolored), fixed to bg-picmi-primary */}
+            <div className="bg-picmi-primary border-2 border-black rounded-2xl shadow-hard p-6 md:p-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm transition-all duration-200">
               <span className="material-icons text-3xl bg-white border-2 border-black rounded-full p-2 shadow-hard-sm mb-4 inline-block">
                 mood
               </span>
@@ -337,8 +345,8 @@ export default function ProfessionnelsPage() {
               </p>
             </div>
 
-            {/* Visibilité */}
-            <div className="bg-white border-2 border-black rounded-2xl shadow-hard p-6 md:p-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm transition-all duration-200 sm:col-span-2 lg:col-span-1">
+            {/* Visibilité — was bg-white (uncolored), fixed to bg-picmi-accent */}
+            <div className="bg-picmi-accent border-2 border-black rounded-2xl shadow-hard p-6 md:p-8 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm transition-all duration-200 sm:col-span-2 lg:col-span-1">
               <span className="material-icons text-3xl bg-white border-2 border-black rounded-full p-2 shadow-hard-sm mb-4 inline-block">
                 visibility
               </span>
@@ -365,17 +373,15 @@ export default function ProfessionnelsPage() {
           </h2>
           <p className="text-lg md:text-xl font-medium text-gray-800 max-w-2xl mx-auto mb-10">
             Rejoignez les partenaires Pic&apos;mi et offrez une animation
-            rentable à vos visiteurs. Aucun risque, que du positif.
+            rentable à vos visiteurs.
           </p>
-          <a
+          <Link
             className="inline-flex items-center justify-center px-8 py-4 md:px-12 md:py-6 border-2 border-black text-xl md:text-3xl font-bold rounded-full text-black bg-picmi-primary hover:bg-white transition-all duration-200 shadow-hard-lg hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-hard"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={CONTACT_LINK}
           >
             DEVENIR PARTENAIRE
             <span className="material-icons ml-3">handshake</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -388,13 +394,13 @@ export default function ProfessionnelsPage() {
           <div className="space-y-4 md:space-y-6">
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                L'installation est-elle vraiment 100% gratuite pour moi ?
+                L&apos;installation est-elle vraiment 100% gratuite pour moi ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Aucun. Zéro euro. Nous fournissons la borne, les consommables et
+                Oui, absolument. Nous fournissons la borne, les consommables et
                 le support technique. Vous mettez à disposition l&apos;espace et
                 l&apos;accès à une prise électrique, c&apos;est tout.
               </div>
@@ -402,19 +408,19 @@ export default function ProfessionnelsPage() {
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Comment mes clients paient-ils leurs photos?
+                Comment mes clients paient-ils pour leurs photos ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                La borne est 100% autonome. Elle est équipée d&apos;un QR code acceptant Apple Pay, Google Pay, etc. Vous n&apos;avez aucune gestion de caisse à faire.
+                La borne est 100% autonome. Elle est équipée d&apos;un terminal de paiement acceptant Apple Pay, Google Pay et carte bancaire. Vous n&apos;avez aucune gestion de caisse à faire.
               </div>
             </details>
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-primary open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Puis-je l'installer de manière récurrente (toutes les semaines)?
+                Puis-je proposer le photobooth de manière récurrente (toutes les semaines) ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
@@ -423,22 +429,20 @@ export default function ProfessionnelsPage() {
                 Bien sûr ! Nous proposons des partenariats récurrents pour les
                 lieux qui souhaitent proposer le photobooth de manière régulière
                 (chaque week-end, chaque mois, etc.). Les conditions sont
-                adaptées à la fréquence. Pour en discuter,{" "}
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                adaptées à la fréquence.{" "}
+                <Link
+                  href={CONTACT_LINK}
                   className="underline font-bold hover:text-picmi-primary transition-colors"
                 >
-                  [Prenez rendez-vous ici]
-                </a>
+                  Contactez-nous pour en discuter
+                </Link>
                 .
               </div>
             </details>
 
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-mint open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                Les photos peuvent-elles afficher mon logo?
+                Les photos peuvent-elles afficher mon logo ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
@@ -452,15 +456,15 @@ export default function ProfessionnelsPage() {
             </details>
             <details className="bg-white border-2 border-black shadow-hard group open:bg-picmi-accent open:shadow-none open:translate-x-[4px] open:translate-y-[4px] transition-all duration-200 rounded-xl">
               <summary className="list-none flex justify-between items-center p-4 md:p-6 cursor-pointer font-bold text-lg md:text-xl">
-                De quel espace avez-vous besoin?
+                De quel espace avez-vous besoin ?
                 <span className="material-icons transform group-open:rotate-180 transition-transform bg-black text-white rounded-full p-1 text-sm">
                   expand_more
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Notre borne est conçue pour optimiser l'espace. Elle occupe
-                moins de 1m2 au sol. Il suffit d'une prise électrique standard
-                (220V) à proximité. Son design élégant lui permet de s'intégrer
+                Notre borne est conçue pour optimiser l&apos;espace. Elle occupe
+                moins de 1m² au sol. Il suffit d&apos;une prise électrique standard
+                (220V) à proximité. Son design élégant lui permet de s&apos;intégrer
                 partout (hall, coin bar, entrée).
               </div>
             </details>
@@ -473,10 +477,10 @@ export default function ProfessionnelsPage() {
                 </span>
               </summary>
               <div className="px-4 md:px-6 pb-4 md:pb-6 pt-0 font-medium text-base md:text-lg leading-relaxed">
-                Nous surveillons l'état de la borne à distance. En cas de
+                Nous surveillons l&apos;état de la borne à distance. En cas de
                 problème technique ou de besoin de consommables, notre équipe
                 intervient rapidement. Tout est inclus dans le service, vous
-                n'avez rien à gérer.
+                n&apos;avez rien à gérer.
               </div>
             </details>
           </div>
